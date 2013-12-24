@@ -1,0 +1,12 @@
+<%= form_for(@session) do |f| %>
+
+  <div>
+    <%= f.label :name %>
+    <br>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.submit "Make a new session" %>
+  </div>
+
+<% end %>

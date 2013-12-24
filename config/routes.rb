@@ -1,12 +1,12 @@
-Distraction::Application.routes.draw do
-  resources :tallies
+Distracker::Application.routes.draw do
+  resources :distractions
   resources :sessions
   devise_for :users do get '/users/sign_out' => 'devise/sessions#destroy' end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'application#home'
+   root 'pages#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Distraction::Application.load_tasks
+Distracker::Application.load_tasks

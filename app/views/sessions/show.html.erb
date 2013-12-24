@@ -1,0 +1,16 @@
+<h1><%= @session.name %></h1>
+
+<%= render './distractions/form' %>
+
+<br>
+
+<p>
+
+You have been distracted
+<%= @session.distractions.size %>
+ times.
+
+</p>
+
+<%= button_to 'End Session', session_path(@session, ended_at: Time.now) %>
+
