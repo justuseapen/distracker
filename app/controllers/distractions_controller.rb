@@ -6,21 +6,15 @@ class DistractionsController < ApplicationController
 
 	def new
 		@distraction = Distraction.new
-		if @distraction.save
-			redirect_to '/sessions/show', notice: "Distraction saved successfully."
-		else
-			render @session.show
-			notice: "Distraction couldn't be saved!."
-		end
 	end
 
 	def create
-		@distraction = Distraction.new
+		@distraction = Distraction.build
 		if @distraction.save
 			redirect_to '/sessions/show', notice: "Distraction saved successfully."
 		else
-			render @session.show
-			notice: "Distraction could not be saved!"
+			redirect_to '/sessions/show', notice: "Distraction could not be saved!"
+			
 		end
 	end
 

@@ -17,6 +17,10 @@ class SessionsController < ApplicationController
 		@session
 	end
 
+  def new_distraction
+    @distraction = Distraction.create
+  end
+
 	def create
     @session = current_user.sessions.build(session_params)
 
