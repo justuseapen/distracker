@@ -1,4 +1,4 @@
-class Session < ActiveRecord::Base
+class Sesh < ActiveRecord::Base
 	belongs_to :user
 	has_many :distractions, dependent: :destroy
 	validates :name, presence: true

@@ -1,7 +1,7 @@
 class CreateDistractions < ActiveRecord::Migration
   def up
     create_table :distractions do |t|
-      t.integer :session_id, null: false
+      t.integer :sesh_id, null: false
 
       t.timestamps
     end

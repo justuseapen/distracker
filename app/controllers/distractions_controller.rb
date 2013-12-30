@@ -1,7 +1,7 @@
 class DistractionsController < ApplicationController
 
 	def index
-		@distractions = current_session.Distraction.all
+		@distractions = current_sesh.Distraction.all
 	end
 
 	def new
@@ -9,12 +9,12 @@ class DistractionsController < ApplicationController
 	end
 
 	def create
-		@session = Session.find(params[:session_id])
-		@distraction = Distraction.new(session_id: @session.id)
+		@sesh = Sesh.find(params[:sesh_id])
+		@distraction = Distraction.new(sesh_id: @sesh.id)
 		if @distraction.save
-			redirect_to session_path(@session), notice: "Distraction saved successfully."
+			redirect_to sesh_path(@sesh), notice: "Distraction saved successfully."
 		else
-			redirect_to session_path(@session), notice: "Distraction could not be saved!"
+			redirect_to sesh_path(@sesh), notice: "Distraction could not be saved!"
 			
 		end
 	end

@@ -10,6 +10,6 @@ require 'spec_helper'
 #     end
 #   end
 # end
-describe SessionsHelper do
+describe SeshesHelper do
   pending "add some examples to (or delete) #{__FILE__}"
 end
