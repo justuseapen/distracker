@@ -24,7 +24,7 @@ class SeshesController < ApplicationController
     if @sesh.update(sesh_params)
       redirect_to @sesh, notice: 'Sesh was successfully created.'
     else
-      render action: 'new'
+      redirect_to root_path, notice: 'Sesh name is REQUIRED, bro. Like, totally mandatory, sorry.'
     end
   end
 
