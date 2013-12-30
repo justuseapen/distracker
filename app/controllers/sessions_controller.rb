@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
 
 	def show
 		@session = Session.find(params[:id])
+    @distraction = Distraction.new(session_id: @session.id)
 	end
 
 	def new
@@ -16,10 +17,6 @@ class SessionsController < ApplicationController
 	def edit
 		@session
 	end
-
-  def new_distraction
-    @distraction = Distraction.create
-  end
 
 	def create
     @session = current_user.sessions.build(session_params)

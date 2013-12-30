@@ -1,1 +1,3 @@
-<%= button_to 'One Distraction', action: 'create' %>
+<%= form_for([@session, @distraction]) do |f| %>
+	<%= f.submit "One Distraction" %>
+<% end %>
