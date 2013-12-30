@@ -3,6 +3,7 @@
     <tr>
       <th>Session</th>
       <th>Created At:</th>
+      <th>Ended At:</th>
       <th>Distractions</th>
     </tr>
   </thead>
@@ -12,7 +13,7 @@
       <tr>
         <td><%= session.name %></td>
         <td><%= session.created_at.strftime("%m/%d/%Y @%I:%M%P") %></td>
-        <td>
+        <td><%= session.ended_at.strftime("%m/%d/%Y @%I:%M%P") unless session.ended_at.blank? %>
         </td>
         <td> <%= session.distractions.size %> </td>
         

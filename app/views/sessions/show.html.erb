@@ -12,5 +12,7 @@ You have been distracted
 
 </p>
 
-<%= button_to 'End Session', sessions_index_path %>
+<%= form_for(@session) do |f| %>
+    	<%= f.submit "END SESSION BRO" %>
+<% end %>
 
