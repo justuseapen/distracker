@@ -37,14 +37,20 @@
         </ul>
       </section>
     </nav>
-    <div class="row">
-      <div class="small-12 medium-12 large-12 columns">
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
 
-        <%= yield %>
-        <%= javascript_include_tag "application" %>
+    <div class="row">
+      <div class="center">
+        <div class="small-12 medium-12 large-12 columns">
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+
+          <%= yield %>
+
+          <%= javascript_include_tag "application" %>
+        </div>
       </div>
     </div>
+  
+
   </body>
 </html>

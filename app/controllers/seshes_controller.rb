@@ -19,6 +19,7 @@ class SeshesController < ApplicationController
 	end
 
 	def create
+    Time.zone = 'EST'
     @sesh = current_user.seshes.build(sesh_params)
 
     if @sesh.update(sesh_params)
