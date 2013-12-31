@@ -1,5 +1,8 @@
 class SeshesController < ApplicationController
-	before_action :set_sesh,:authenticate_user!, except: [:index, :show], only: [:show, :edit, :update, :destroy]
+	before_action :set_sesh, :authenticate_user!,
+    # This doesnt make any sense. - Heroiceric
+    # except: [:index, :show],
+    only: [:show, :edit, :update, :destroy]
 
 	def index
 		@seshes = current_user.seshes
@@ -7,6 +10,9 @@ class SeshesController < ApplicationController
 
 	def show
 		@sesh = Sesh.find(params[:id])
+    if current_user != @sesh.user
+      redirect_to root_path, notice: 'STOP HACKING AT ME SWAN!'
+    end
     @distraction = Distraction.new(sesh_id: @sesh.id)
 	end
 
