@@ -1,4 +1,5 @@
 class DistractionsController < ApplicationController
+	before_filter :authenticate_user!, only: [:new, :edit]
 
 	def index
 		@distractions = current_sesh.Distraction.all
