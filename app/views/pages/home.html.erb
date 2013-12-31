@@ -1,4 +1,5 @@
 <h1> Welcome to Distracker </h1>
+<br>
 <h3> The simple distraction-tracking web application </h3>
 
 <% if user_signed_in? %>
@@ -7,8 +8,17 @@
 	<%= render './seshes/index' %>
 
 <% else %>
+
+<br>
+<br>
 	
-	<%= link_to "Log in", new_user_session_path %>
-	<%= link_to "Sign up", new_user_registration_path %>
+	<%= link_to "Log in", new_user_session_path, class: "button" %>
+	<%= link_to "Sign up", new_user_registration_path, class: "alert button" %>
 
 <% end %>
+
+<br>
+<br>
+created by <%= link_to 'Justus','justusunlimited.com'%>
+<br>
+please contribute to the <%= link_to 'Github Repository','https://github.com/justuseapen' %>

@@ -1,19 +1,24 @@
 <table class="table">
   <thead>
     <tr>
-      <th>Sesh</th>
-      <th>Created At:</th>
-      <th>Ended At:</th>
-      <th>Distractions</th>
+      <th>Sesh                                </th>
+      <th>Created At:                         </th>
+      <th>Ended At:                           </th>
+      <th>Distractions                        </th>
     </tr>
   </thead>
 
   <tbody>
     <% @seshes.each do |sesh| %>
       <tr>
-        <td><%= sesh.name %></td>
-        <td><%= sesh.created_at.strftime("%m/%d/%Y @%I:%M%P") %></td>
-        <td><%= sesh.ended_at.strftime("%m/%d/%Y @%I:%M%P") unless sesh.ended_at.blank? %>
+        <td>
+        <%= sesh.name  %>
+        </td> 
+        <td>
+        <%= sesh.created_at.strftime("%m/%d/%Y @%I:%M%P") %>
+        </td>
+        <td>
+        <%= sesh.ended_at.strftime("%m/%d/%Y @%I:%M%P") unless sesh.ended_at.blank? %>
         </td>
         <td> <%= sesh.distractions.size %> </td>
         

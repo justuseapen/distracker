@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Distracker" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -15,7 +15,7 @@
     <nav class="top-bar" data-topbar>
       <ul class="title-area">
         <li class="name">
-          <h1><a href="#">Distracker</a></h1>
+          <h1><%= link_to 'Distracker', root_path%></h1>
         </li>
         <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
       </ul>
@@ -37,16 +37,18 @@
         </ul>
       </section>
     </nav>
+    <center>
+    <div class="row">
+    <div class="small-6 large-2 columns"></div>
+      <div class="small-6 large-8 columns">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
 
-
-
-
-    <div class="container">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
-    <%= yield %>
-    <%= javascript_include_tag "application" %>
+        <%= yield %>
+        <%= javascript_include_tag "application" %>
+      </div>
+    <div class="small-6 large-2 columns"></div>
     </div>
+    </center>
   </body>
 </html>

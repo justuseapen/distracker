@@ -50,9 +50,9 @@
 // $default-float: left;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
-// $secondary-color: #e7e7e7;
-// $alert-color: #f04124;
+ $primary-color: #008CBA;
+ $secondary-color: #e7e7e7;
+ $alert-color: #f04124;
 // $success-color: #43AC6A;
 
 // We use these to make sure border radius matches unless we want it different.
@@ -144,12 +144,12 @@
 // $alert-bottom-margin: rem-calc(20);
 
 // We use these to style the close buttons
-// $alert-close-color: #333;
-// $alert-close-position: rem-calc(5);
-// $alert-close-font-size: rem-calc(22);
-// $alert-close-opacity: 0.3;
-// $alert-close-opacity-hover: 0.5;
-// $alert-close-padding: 9px 6px 4px;
+$alert-close-color: #333;
+$alert-close-position: rem-calc(5);
+$alert-close-font-size: rem-calc(22);
+$alert-close-opacity: 0.3;
+$alert-close-opacity-hover: 0.5;
+$alert-close-padding: 9px 6px 4px;
 
 // We use this to control border radius
 // $alert-radius: $global-radius;

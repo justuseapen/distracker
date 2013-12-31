@@ -1,11 +1,11 @@
 <%= form_for(@sesh) do |f| %>
 
   <div>
-    <%= f.label :name %>
+    <%= f.label "name_the_session:" %>
     <br>
     <%= f.text_field :name %>
   
-    <%= f.submit "MAKE A NEW SESH!" %>
+    <%= f.submit "MAKE A NEW SESH!",class: "radius button" %>
   </div>
 
 <% end %>

@@ -1,18 +1,23 @@
+<center>
+
 <h1><%= @sesh.name %></h1>
 
+<br>
 <%= render './distractions/form' %>
-
 <br>
 
 <p>
 
 You have been distracted
-<h3><%= @sesh.distractions.size %></h3>
+<h1><%= @sesh.distractions.size %></h1>
  times.
 
 </p>
 
+<br>
+
 <%= form_for(@sesh) do |f| %>
-    	<%= f.submit "END SESH BRO" %>
+    	<%= f.submit "END SESH BRO",class: "radius button" %>
 <% end %>
 
+</center>
