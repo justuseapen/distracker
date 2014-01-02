@@ -5,6 +5,7 @@
       <th>Created At:                         </th>
       <th>Ended At:                           </th>
       <th>Distractions                        </th>
+      <th></th>
     </tr>
   </thead>
 
@@ -12,7 +13,7 @@
     <% @seshes.each do |sesh| %>
       <tr>
         <td>
-        <%= sesh.name  %>
+        <%= link_to sesh.name, sesh_path(sesh)  %>
         </td> 
         <td>
         <%= sesh.created_at.strftime("%m/%d/%Y @%I:%M%P") %>
