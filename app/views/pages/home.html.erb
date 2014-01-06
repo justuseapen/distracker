@@ -16,6 +16,15 @@
 	<%= link_to "Log in", new_user_session_path, class: "button" %>
 	<%= link_to "Sign up", new_user_registration_path, class: "alert button" %>
 
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	
+	<script>
+	  // To attach Backstrech as the body's background
+	  $(document).ready(function() {
+	  	$.backstretch( "<%=image_path('no_distractions.jpg')%>");
+	  });
+	</script>
+
 <% end %>
 
 <br>

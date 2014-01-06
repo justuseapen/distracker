@@ -11,6 +11,7 @@ gem "jbuilder", "~> 1.2"
 gem 'devise'
 gem 'simple_form'
 gem 'foundation-rails'
+gem 'backstretch-rails'
 group :doc do
   gem "sdoc", require: false
 end
