@@ -12,6 +12,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'foundation-rails'
 gem 'backstretch-rails'
+
 group :doc do
   gem "sdoc", require: false
 end
@@ -26,6 +27,7 @@ group :development, :test do
   gem "shoulda-matchers"
   gem "valid_attribute"
   gem "capybara"
+  gem 'mailcatcher'
 end
 group :production do
   gem 'rails_12factor'
