@@ -6,6 +6,4 @@ describe Sesh do
   it { should_not have_valid(:name).when(*blank_values) }
   it { should belong_to(:user) }
   it { should have_many(:distractions) }
-  
-
 end
