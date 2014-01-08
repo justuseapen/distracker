@@ -1,4 +1,6 @@
-
+<sub>Using Chrome on a Mac? CTRL + OPTION + D to add a Distraction ;)</sub>
+<br>
+<br>
 <%= form_for([@sesh, @distraction]) do |f| %>
-		<%= f.submit "One Distraction",class: "round alert button" %> 
+		<%= f.submit "One Distraction",class: "round alert button", :accesskey => "D" %> 
 <% end %>
