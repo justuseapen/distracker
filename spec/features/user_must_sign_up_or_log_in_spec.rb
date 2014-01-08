@@ -20,4 +20,11 @@ feature "User must may log in or sign up before accessing core functions", %q{
 
     expect(page).to have_content("A message with a confirmation link has been sent to your email address.")
   end
+  # scenario "user is signed up and logs in" do
+  #   user = FactoryGirl.create(:user)
+  #   user.confirmed_at = Time.now
+  #   user.save
+  #   login_as(user, :scope => :user)
+  #   Warden.test_reset! 
+  # end
 end
