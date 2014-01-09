@@ -78,13 +78,6 @@ Distracker::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
   config.action_mailer.default_url_options = { :host => 'distracker.herokuapp.com' }
-  ActionMailer::Base.smtp_settings = {
-  :address        => "smtp.sendgrid.net",
-  :port           => "25",
-  :authentication => :plain,
-  :user_name      => ENV['app20846703@heroku.com'],
-  :password       => ENV['eswmeadr'],
-  :domain         => ENV['SENDGRID_DOMAIN']
-}
+  
  
 end
