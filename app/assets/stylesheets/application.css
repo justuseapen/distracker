@@ -13,3 +13,13 @@
 
  *= require_tree .
  */
+
+.home-text {
+		color:#000;
+    display:block;
+    text-shadow:0px 1px 1px #ababa5;
+    transition:all 0.1s ease-in;
+    -moz-transition:all 0.1s ease-in;
+    -webkit-transition:all 0.1s ease-in;
+    -o-transition:all 0.1s ease-in;
+}
