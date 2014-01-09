@@ -6,10 +6,11 @@ Distracker::Application.initialize!
 
 ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.smtp_settings = {
-  :address        => "smtp.sendgrid.net",
-  :port           => "587",
+  :address        => 'smtp.sendgrid.net',
+  :port           => '587',
   :authentication => :plain,
   :user_name      => ENV['app20846703@heroku.com'],
   :password       => ENV['eswmeadr'],
-  :domain         => ENV['distracker.herokuapp.com']
+  :domain         => 'heroku.com',
+  :enable_starttls_auto => true
 }
