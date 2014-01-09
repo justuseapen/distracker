@@ -12,6 +12,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'foundation-rails'
 gem 'backstretch-rails'
+gem 'newrelic_rpm'
 
 group :doc do
   gem "sdoc", require: false
