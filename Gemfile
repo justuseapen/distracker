@@ -31,6 +31,7 @@ group :development, :test do
 end
 group :production do
   gem 'rails_12factor'
+  gem 'thin'
 end
 
 ruby "2.0.0"
