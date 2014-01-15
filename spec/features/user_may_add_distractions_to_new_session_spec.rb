@@ -9,17 +9,18 @@ feature "Users may end or add distractions to current sesh", %q{
 # *Allow creation of new distractions that belong_to current session
 # *Allow update of session.ended_at
 # *and return to sessions index
-	background do
-    User.create(:email => 'user@example.com', :password => 'caplin')
-  end
+
 	scenario "user can add distractions" do
-		visit root_path
-		click_link 'Log in'
-		fill_in 'Email', with:  'user@example.com'
-    fill_in 'Password', with:  'caplin'
+    @user = FactoryGirl.build(:user)
+    @user.skip_confirmation!
+    @user.save!
+  	visit root_path
+  	click_link 'Log in'
+  	fill_in 'Email', with: @user.email
+    fill_in 'Password', with: @user.password
     click_button 'Sign in'
-    expect(page).to have_content('Signed in')
-    fill_in 'sesh', with: 'Test'
+    
+    fill_in 'sesh_name', with: 'Test'
     click_button 'MAKE A NEW SESH'
     click_button 'One Distraction'
     expect(page).to have_content('Distraction saved ')

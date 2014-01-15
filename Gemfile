@@ -29,6 +29,7 @@ group :development, :test do
   gem "valid_attribute"
   gem "capybara"
   gem 'mailcatcher'
+  gem 'launchy'
 end
 group :production do
   gem 'rails_12factor'
