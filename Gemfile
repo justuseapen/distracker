@@ -12,6 +12,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'foundation-rails'
 gem 'backstretch-rails'
+gem 'grape'
 
 group :doc do
   gem "sdoc", require: false
