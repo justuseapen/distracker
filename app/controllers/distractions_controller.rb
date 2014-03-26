@@ -1,4 +1,5 @@
 class DistractionsController < ApplicationController
+  respond_to :html, :json
 	before_filter :authenticate_user!
 
 	def new

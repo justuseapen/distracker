@@ -1,11 +1,11 @@
 class SeshesController < ApplicationController
+  respond_to :html, :json
 	before_action :set_sesh, :authenticate_user!,
-    # This doesnt make any sense. - Heroiceric
-    # except: [:index, :show],
     only: [:show, :edit, :update, :destroy]
 
 	def index
 		@seshes = current_user.seshes
+    respond_with(@seshes)
 	end
 
 	def show
@@ -33,6 +33,7 @@ class SeshesController < ApplicationController
     else
       redirect_to root_path, notice: 'Sesh name is REQUIRED, bro. Like, totally mandatory, sorry.'
     end
+    respond_with(@sesh)
   end
 
   def update
