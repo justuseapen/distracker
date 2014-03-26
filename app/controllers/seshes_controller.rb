@@ -14,6 +14,10 @@ class SeshesController < ApplicationController
       redirect_to root_path, notice: 'STOP HACKING AT ME SWAN!'
     end
     @distraction = Distraction.new(sesh_id: @sesh.id)
+    respond_to do |format|
+      format.html
+      format.json { render json: @sesh }
+    end
 	end
 
 	def new
@@ -29,11 +33,9 @@ class SeshesController < ApplicationController
     @sesh = current_user.seshes.build(sesh_params)
 
     if @sesh.update(sesh_params)
-      redirect_to @sesh, notice: 'Sesh was successfully created.'
-    else
-      redirect_to root_path, notice: 'Sesh name is REQUIRED, bro. Like, totally mandatory, sorry.'
+      flash[:notice] = 'Sesh was successfully created.' if @sesh.save
+      respond_with(@sesh)
     end
-    respond_with(@sesh)
   end
 
   def update
